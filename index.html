@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Testimonials</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	</head>
+	<body>
+		<body class="bg-gray-500 text-slate-800 flex flex-col justify-center items-center min-h-screen relative px-4">
+			<main class="bg-white my-4 w-full max-w-2xl rounded-3xl text-center p-8 sm:p-16 [&_*]:ease-in-out">
+				<h1 class="text-xl font-bold">A word from our customers</h1>
+
+				<p class="text-sm">We've been helping businesses do their best since 2017</p>
+
+				<div class="mt-6 grid grid-cols-1 sm:grid-cols-[60px_auto_60px] [grid-template-areas:'slider_slider'_'nav-left_nav-right'] sm:[grid-template-areas:'nav-left_slider_nav-right'] gap-2 sm:gap-6 [&>button]:rounded-full [&>button]:w-10 [&>button]:h-10 [&>button]:shrink-0 [&>button]:text-gray-600 [&>button]:text-2xl [&>button]:transition-all [&>button]:duration-500 [&_button]:relative [&_button]:isolate [&_button]:bg-black sm:[&>button]:mt-8 before:[&>button]:absolute before:[&>button]:inset-px before:[&>button]:transition-all before:[&>button]:duration-300 before:[&>button]:-z-10 before:[&>button]:rounded-full hover:before:[&>button]:inset-full before:[&>button]:bg-white hover:[&>button]:text-white hover:[&>button]:bg-black hover:[&>button]:border-black">
+					<button data-slide="prev" class="[grid-area:nav-left] material-symbols-outlined">navigate_before</button>
+
+					<div id="slider" class="[grid-area:slider]">
+						<div id="list-cards" class="grid [grid-template-areas:'stack'] overflow-hidden"></div>
+					</div>
+
+					<button data-slide="next" class="[grid-area:nav-right] material-symbols-outlined">navigate_next</button>
+				</div>
+			</main>
+
+			<template id="tpl-card">
+				<div class="card [grid-area:stack] opacity-0">
+					<blockquote class="bg-black text-white rounded-md p-6 text-sm transition-all duration-500 scale-0 relative isolate before:absolute before:bg-black before:w-4 before:h-4 before:rotate-45 before:-bottom-2 before:left-2/4 before:-translate-x-2/4 before:-z-10 before:-translate-y-full before:transition before:duration-500 before:delay-500"></blockquote>
+
+					<div class="details text-sm translate-y-[150px] transition-all duration-500 flex flex-col items-center gap-2 mt-6">
+						<img review-img class="w-16 h-16 object-cover rounded-full" />
+
+						<div>
+							<p review-name class="text-sm font-bold"></p>
+
+							<p review-role class="text-xs"></p>
+						</div>
+					</div>
+				</div>
+			</template>
+		</body>
+
+		<script src="main.js"></script>
+	</body>
+</html>
